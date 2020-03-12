@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Items from './Components/Items'
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text style={styles.paragraph}>
-            Open up App.js to start working on your app Now!</Text>
-        <Text>Hello World</Text>
-    </View>
-  );
+
+export default class App extends Component {
+    render (){
+        return (
+            <View style={styles.container}>
+                <Text style={styles.paragraph}>
+                    Shopping App!
+                </Text>
+        
+            </View>
+          );
+    }
 }
 
 const styles = StyleSheet.create({
@@ -17,11 +21,12 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    margin: 5,
   },
   paragraph: {
-    margin: 24,
-    fontSize: 20,
+    top: 10,
+    margin: 20,
+    fontSize: 26,
     fontWeight: 'bold',
     textAlign: 'center',
     color: '#34495e',
