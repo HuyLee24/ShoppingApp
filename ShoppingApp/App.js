@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Items from './Components/Items'
-
 
 export default class App extends Component {
     render (){
@@ -10,7 +8,6 @@ export default class App extends Component {
                 <Text style={styles.paragraph}>
                     Shopping App!
                 </Text>
-        
             </View>
           );
     }
