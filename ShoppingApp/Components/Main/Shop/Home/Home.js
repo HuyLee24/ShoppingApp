@@ -1,24 +1,40 @@
 import React, { Component } from 'react';
-import { Navigator } from 'react-native';
-
+import { NavigationContainer } from '@react-navigation/native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import HomeView from './HomeView';
 import ProductDetail from '../ProductDetail/ProductDetail';
 import ListProduct from '../ListProduct/ListProduct';
+
+const Tab = createBottomTabNavigator();
 
 class Home extends Component {
     render() {
         const { types, topProducts } = this.props;
         return (
-            <Navigator
-                initialRoute={{ name: 'HOME_VIEW' }}
-                renderScene={(route, navigator) => {
-                    switch (route.name) {
-                        case 'HOME_VIEW': return <HomeView navigator={navigator} types={types} topProducts={topProducts} />;
-                        case 'LIST_PRODUCT': return <ListProduct navigator={navigator} category={route.category} />;
-                        default: return <ProductDetail navigator={navigator} product={route.product} />;
-                    }
-                }}
-            />
+            <NavigationContainer> 
+              <Tab.Navigator>
+                <Tab.Screen 
+                  name="HOME_VIEW" 
+                  component={HomeView} 
+                  options={{ 
+                    tabBarIcon: ({ color, size }) => (
+                      <Ionicons name="ios-home" color={color} size={size} />)
+                  }}
+                  types={types} topProducts={topProducts}
+                />
+                <Tab.Screen 
+                  name="LIST_PRODUCT" 
+                  component={ListProduct} 
+                  category={route.category}
+                />
+                <Tab.Screen 
+                  name="ProductDetail" 
+                  component={ProductDetail} 
+                  product={route.product}
+                />
+                
+              </Tab.Navigator>
+            </NavigationContainer>
         );
     }
 }

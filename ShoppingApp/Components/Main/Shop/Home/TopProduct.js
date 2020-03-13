@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { 
-    View, Text, Image, StyleSheet, Dimensions, TouchableOpacity, ListView 
-} from 'react-native';
+import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity, ListView } from 'react-native';
 
 const url = 'http://localhost/api/images/product/';
 
