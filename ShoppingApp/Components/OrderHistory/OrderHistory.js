@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {
-    View, TouchableOpacity, Text, Image, StyleSheet, Dimensions, ScrollView
-} from 'react-native';
+import { View, TouchableOpacity, Text, Image, StyleSheet, Dimensions, ScrollView } from 'react-native';
 import backSpecial from '../../media/appIcon/backs.png';
 import getOrderHistory from '../../api/getOrderHistory';
 import getToken from '../../api/getToken';

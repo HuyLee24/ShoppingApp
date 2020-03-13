@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {
-    View, Text, TouchableOpacity, Image, StyleSheet
-} from 'react-native';
+import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
 import icBack from '../../media/appIcon/back_white.png';
 import icLogo from '../../media/appIcon/ic_logo.png';
@@ -46,7 +44,7 @@ export default class Authentication extends Component {
                     <TouchableOpacity onPress={this.goBackToMain.bind(this)}>
                         <Image source={icBack} style={iconStyle} />
                     </TouchableOpacity>
-                    <Text style={titleStyle}>Wearing a Dress</Text>
+                    <Text style={titleStyle}>Clothing</Text>
                     <Image source={icLogo} style={iconStyle} />
                 </View>
                 {mainJSX}

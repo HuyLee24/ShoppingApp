@@ -43,7 +43,7 @@ export default class SignUp extends Component {
         const { name, email, password } = this.state;
         register(email, name, password)
         .then(res => {
-            if (res === 'THANH_CONG') return this.onSuccess();
+            if (res === 'Success') return this.onSuccess();
             this.onFail();
         });
     }

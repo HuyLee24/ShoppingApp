@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { 
-    View, Text, TouchableOpacity, Image, Dimensions, TextInput, StyleSheet 
-} from 'react-native';
+import { View, Text, TouchableOpacity, Image, Dimensions, TextInput, StyleSheet } from 'react-native';
 import global from '../../global';
 import icLogo from '../../../media/appIcon/ic_logo.png';
 import icMenu from '../../../media/appIcon/ic_menu.png';
@@ -33,7 +31,7 @@ export default class Header extends Component {
                     <TouchableOpacity onPress={this.props.onOpen}>
                         <Image source={icMenu} style={iconStyle} />
                     </TouchableOpacity>
-                    <Text style={titleStyle}>Wearing a Dress</Text>
+                    <Text style={titleStyle}>Clothing</Text>
                     <Image source={icLogo} style={iconStyle} />
                 </View>
                 <TextInput 
